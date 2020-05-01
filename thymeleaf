@@ -1,0 +1,20 @@
+*1st: Checking if the list is null or list is empty*
+Example in java: 
+List<PersonData> personDataList=new ArrayList<>();
+...<some logic executed>
+model.addAttribute("yourLIst", personDataList);
+In Thymeleaf:
+*<span th:if="${#lists.isEmpty(yourList)}">Data Not Found</span>*
+The above works even for String values 
+
+The below examples for numbers
+Java: int totalCases=0; 
+model.addAttribute("total", totalCases);
+In Thymeleaf
+<span th:if="${total == 0}">Zero cases</span>
+<span th:if="${total &lt; 5}">Now total is less than five </span>
+similarly use below
+&lt; for < 
+&gt; for >
+&le; for <= 
+&ge; for >=
